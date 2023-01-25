@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --animate-duration: 800ms;
+}
+
+body {
+  background-color: #ebeef2 !important;
+}
+
+.login-wrapper {
+  border: 2px solid #d3d3d3;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  padding: 1em;
+  text-align: left;
+  width: 600px;
+  background-color: white;
+  form {
+    padding: 1em;
+  }
+  label {
+    font-weight: 600;
+  }
+}
+.navbar {
+  .header {
+    width: 83%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 15px;
+  }
+  p {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .hand {
+    float: right;
+    margin: 12px;
+  }
+}
+
+.sidebar {
+  background-color: #151010e6;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 17%;
+  float: left;
+  text-align: center;
+  h1 {
+    font-size: 30px;
+    font-weight: 500;
+    padding: 10px;
+    color: white;
+    box-shadow: rgb(220 190 186 / 57%) 6px 1px 16px;
+  }
+  .items {
+    h2 {
+      color: white;
+      text-align: left;
+      font-size: 20px;
+      margin: 0px;
+      margin-left: 0px;
+      font-weight: 300;
+      padding: 10px;
+    }
+    .active {
+      background-color: #ffff00;
+      color: #000;
+    }
+    a {
+      position: relative;
+      display: flow-root;
+      margin-bottom: 2px;
+    }
+    a:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: width 0.6s ease-in-out;
+    }
+    a:hover:after {
+      width: 100%;
+    }
+  }
+
+  img {
+    width: 68%;
+    margin: 1rem;
+  }
+  .link {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+@media (max-width: 768px) {
+  .mixed-chart {
+    margin: 10px auto;
+  }
+}
+
+.wrapper {
+  position: absolute;
+  right: 0;
+  top: 7rem;
+  width: 80%;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: rgb(0 0 0 / 26%) 0px 0px 4px;
+  min-height: 480px;
+  z-index: -1;
+  h1 {
+    text-align: center;
+  }
+  img {
+    width: 12%;
+  }
+  tr:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 15px;
+    animation: row-anim 1s linear 1 forwards;
+  }
+  @keyframes row-anim {
+    0% {
+      background-color: white;
+    }
+    100% {
+      background-color: #151010e6;
+      color: white;
+    }
+  }
+  .h2_user {
+    text-align: center;
+    font-size: 30px;
+    color: black;
+  }
+  .btn-warning {
+    margin-bottom: 24px;
+    width: 5rem;
+    border-radius: 0px;
+  }
+
+  .table-responsive {
+    min-height: 300px;
+  }
+}
+
+.user-form {
+  .fields {
+    justify-content: space-between;
+  }
+  label {
+    color: black;
+    margin-top: 5px;
+  }
+  button {
+    margin-top: 1rem;
+    margin-left: 16px;
+    border-radius: 0px;
+  }
+}
+
+.btn-position {
+  margin-top: 11rem;
+}
+
+.loader {
+  text-align: center;
+}
+
+.hand {
+  cursor: pointer;
+}
+
+.inplace-confirm {
+  text-align: center;
+  min-width: 9rem;
+  padding: 10px 20px;
+  border: 2px solid #dcdcdc;
+  box-shadow: 5px 10px #dcdcdc;
+  label {
+    text-transform: inherit !important;
+  }
+  .btn-wrapper {
+    margin-top: 1rem;
+    button {
+      padding: 0.25rem 0.75em;
+      background: #000;
+      color: #fff;
+    }
+  }
+}
+
+.tippy-box {
+  background: transparent;
+  .tippy-content {
+    padding: 0 !important;
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.paginateBtn {
+  display: flex;
+  justify-content: end;
+}
+
+.paginate {
+  .item {
+    align-items: center;
+    color: #ffff00;
+    cursor: pointer;
+    display: flex;
+    font-size: 17px;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+  }
+
+  .active {
+    border: solid 1px #000;
+    border-radius: 40px;
+    color: #000;
+  }
+
+  .next {
+    background-color: rgb(252, 212, 59);
+    height: 47px;
+    position: absolute;
+    right: 0;
+    width: 50px;
+  }
+
+  .pagination {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 47px;
+    justify-content: center;
+    list-style-type: none;
+    position: relative;
+    width: 100%;
+  }
+
+  .pagination-page {
+    font-weight: 700;
+  }
+
+  .previous {
+    background-color: rgb(252, 212, 59);
+    height: 47px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+  }
+}
+
+.react-calendar{
+  display: contents;
+}
+
+.rbc-calendar {
+  min-height: 382px;
+}
